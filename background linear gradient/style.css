@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    animation: gradient 7s cubic-bezier(1, -0.04, 0.66, 0.96) infinite alternate-reverse;
+    justify-content: center;
+    height: 100vh;
+    background: -webkit-linear-gradient(to right top, #7300be, #4850e0, #0077f4, #0098fd, #00b5ff, #24c4fe, #49d3fc, #6be0f9, #8ae6f8, #a4ecf8, #bcf2f9, #d3f8fb) 50% / 200% 200%;
+    background: linear-gradient(to right top, #7300be, #4850e0, #0077f4, #0098fd, #00b5ff, #24c4fe, #49d3fc, #6be0f9, #8ae6f8, #a4ecf8, #bcf2f9, #d3f8fb) 50% / 200% 200%;
+}
+
+
+@keyframes gradient {
+    0% { 
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+    
+    100% {
+        background-position: 0%;
+    }
+} 

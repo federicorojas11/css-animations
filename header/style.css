@@ -1,5 +1,15 @@
+
+
+:root {
+  --primary:#833502;
+}
+
 body {
-  background-color: #dcf5ff;
+  background-color: #ecaa83;
+}
+
+nav {
+  border-bottom: 1px solid rgba(126, 5, 5, 0.466);
 }
 
 ul {
@@ -21,5 +31,36 @@ a {
   padding: 10px;
   position: relative;
   text-decoration: none;
+  transition: color .2s ease-in-out;
 }
 
+span {
+  display: block;
+  transition: transform .5s ease-in-out;
+}
+
+a::after {
+  background-color: var(--primary);
+  bottom: 5px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform .2s ease-in-out;
+}
+
+/* Hover Effects */
+
+a:hover {
+  color: var(--primary);
+}
+
+a:hover span {
+  transform: translateY(-3px);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
